@@ -1,0 +1,126 @@
+.header{
+    box-shadow: 0px 5px 5px -5px rgba(166, 166, 166, 0.28);
+    display: flex;
+    height: 48px;
+    padding: 0px 12px;
+    justify-content: space-between;
+    align-items: center;
+}
+.right label > button{
+    background-color: unset;
+    flex-direction: column;
+    width: 30px;
+    height: 30px;
+    gap: 4px;
+    padding: 4px;
+    pointer-events: none;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+}
+.right input{
+    display: none;
+
+}
+.right label{
+    display: flex;
+
+}
+.topBar, .middleBar, .bottomBar{
+    width: 21px;
+    height: 3px;
+    border-radius: 3px;
+    transition: all 0.2s;
+}
+.topBar{
+    background-color: var(--darker-gray);
+    transform: rotate(0);
+}
+.middleBar{
+    background-color: var(--orange);
+    opacity: 1;
+}
+.bottomBar{
+    background-color: var(--darker-gray);
+}
+.right input:checked ~ label .topBar{
+    transform: rotate(45deg);
+    transform-origin: 10% 180%;
+}
+.right input:checked ~ label .middleBar{
+    opacity: 0;
+}
+.right input:checked ~ label .bottomBar{
+    transform: rotate(-45deg);
+    transform-origin: 10% -45%;
+}
+.right nav{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 0 0;
+    padding-top: 36px;
+}
+.right input:checked ~ nav{
+    display: flex;
+    position: absolute;
+    inset: 0;
+    top: 106px;
+}
+
+.right nav ul{
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+}
+.mainItem > a{
+    color: var(--very-dark-gray);
+}
+.subItem > a{
+    color: var(--very-dark-gray);
+}
+.nestedItem{
+    flex-direction: column;
+}
+.nestedItem > ul{
+    height: 0;
+    overflow: hidden;
+    padding-inline: 16px;
+}
+.nestedItem > button{
+    background-color: unset;
+    display: flex;
+    width: fit-content;
+    position: relative;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.nestedItem > button:after{
+    content: '';
+    width: 0;
+    height: 0;
+    display: flex;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 12px solid var(--orange); 
+}
+.nestedItem:hover > button:after{
+    border-bottom: none; 
+    border-top: 12px solid var(--orange); 
+}
+.nestedItem:hover > ul{
+    height: fit-content;
+    padding-block: 16px;
+}
+
+@media (max-width:375px){
+    .right input:checked ~ nav{
+        top: 141px;
+    }
+}
+

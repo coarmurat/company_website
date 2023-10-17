@@ -1,0 +1,32 @@
+:root {
+    --dark-gray: #383838;
+    --green: #008806;
+    --light-green:#00ca09;
+    --white: #FFFFFF;
+    --orange: #EC932D;
+    --darker-gray: #2E2E2E;
+    --navy-blue: #1E2F68;
+    --light-blue: #E8F8FF;
+    --very-dark-gray: #242424;
+    --slate-blue: #29333F;
+}
+a{
+    text-decoration: none;
+}
+button{
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html,button,input,select,textarea{
+    font-family:unset;
+}
+ul{
+  padding: 0;  
+  margin: 0;
+}
+ul,li{
+    display: flex;
+}

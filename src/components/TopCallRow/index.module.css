@@ -1,0 +1,42 @@
+.topCallRow{
+    background-color: var(--dark-gray);
+    display: flex;
+    padding: 8px 12px;
+    justify-content: space-between;
+    align-items: center;
+}
+.topCallRow a{
+    color: var(--white);
+}
+.topCallRow a span{
+    color: var(--light-green);
+    padding-inline: 2px;
+}
+.topCallRow button{
+    opacity: 0.1;
+    border-radius: 40px;
+    background: var(--green);
+    color: var(--white);
+    box-shadow: 0px 4px 4px 0px #00000040;
+    padding: 12px 18px;
+    gap: 18px;
+}
+.topCallRow button:hover{
+    background-color: var(--light-green);
+}
+.topCallRow button span{
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.06px;    
+}
+.showCallButton{
+    opacity: 1 !important;
+    transition: opacity .3s ease;
+}
+@media (max-width:375px){
+    .topCallRow{
+        flex-direction: column;
+        gap: 12px;
+        padding-block: 12px;
+    }
+}
