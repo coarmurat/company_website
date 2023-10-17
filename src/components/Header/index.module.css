@@ -56,12 +56,14 @@
     transform-origin: 10% -45%;
 }
 .right nav{
+    background-color: var(--white);
     display: none;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     flex: 1 0 0;
     padding-top: 36px;
+    height: calc(100vh - 106px);
 }
 .right input:checked ~ nav{
     display: flex;
@@ -91,6 +93,8 @@
     padding-inline: 16px;
 }
 .nestedItem > button{
+    font-weight: 600;
+    color: var(--dark-gray);
     background-color: unset;
     display: flex;
     width: fit-content;
@@ -103,15 +107,15 @@
 .nestedItem > button:after{
     content: '';
     width: 0;
-    height: 0;
     display: flex;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-bottom: 12px solid var(--orange); 
+    border-top: 12px solid var(--orange); 
+    
 }
 .nestedItem:hover > button:after{
-    border-bottom: none; 
-    border-top: 12px solid var(--orange); 
+    border-top: none; 
+    border-bottom: 12px solid var(--orange); 
 }
 .nestedItem:hover > ul{
     height: fit-content;

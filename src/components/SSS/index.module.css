@@ -1,0 +1,55 @@
+.sss{
+    background-color: var(--navy-blue);
+    display: flex;
+    padding: 12px;
+    flex-direction: column;
+    gap: 12px;    
+}
+.sss h1{
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 12px;
+}
+.sss h1::after{
+    width: 50px;
+}
+.icon{
+    background-image: url('/plus.svg');
+    width: 13px;
+    height: 13px;
+}
+.row{
+    color:var(--white);
+    display: flex;
+    padding: 12px 0px;
+    flex-direction: column;
+}
+.row label{
+    display: flex;
+    padding: 12px 12px;
+    flex-direction: column;
+    gap: 6px;
+}
+.row p{
+    display: none;
+}
+.row > div{
+    display: flex;
+    justify-content: space-between;
+}
+.sss input{
+    display: none;
+}
+.row input:checked + label{
+    border-radius: 12px;
+    background-color: var(--white);
+    color: var(--navy-blue);
+}
+.row input:checked + label > p{
+    display: flex;
+}
+.row input:checked + label .icon{
+    background-image: url('/minus.svg') !important;
+}

@@ -1,0 +1,8 @@
+.underLine::after{
+    background-color: var(--orange);
+    display: flex;
+    content: '';
+    width: 50px;
+    height: 3px;
+    border-radius: 3px;
+}

@@ -1,0 +1,19 @@
+.banner{
+    background-color: var(--navy-blue);
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--white);
+}
+.banner h1 span{
+    color: var(--orange);
+}
+.bannerImageWrapper img{
+    width: 100%;
+    height: auto;
+}
+.bannerImageWrapper{
+    display: flex;
+    object-fit: cover;
+}
