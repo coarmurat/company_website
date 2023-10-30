@@ -1,6 +1,6 @@
 import styles from './index.module.css'
 import typo from '@/styles/typo.module.css'
-import commonStyles from '@/styles/common.module.css'
+import underLine from '@/styles/underLine.module.css'
 
 export default function SSS() {
 
@@ -33,13 +33,13 @@ export default function SSS() {
     ]
 
     return(
-        <div className={styles.sss}>
-            <h1 className={`${typo.bold14} ${commonStyles.underLine}`}>Sık Sorulan Sorular</h1>
+        <section className={styles.sss}>
+            <h1 className={`${typo.bold14} ${underLine.className}`}>Sık Sorulan Sorular</h1>
             {
                 sss.map(row => (
-                    <div className={styles.row}>
-                        <input type='radio' id={`${row.id}`} name='accordion'/>
-                        <label className={styles.row} key={row.id} htmlFor={`${row.id}`}>                
+                    <div className={styles.row} key={row.id}>
+                        <input type='radio' id={`${row.id}`} name='accordion' hidden />
+                        <label className={styles.row} htmlFor={`${row.id}`}>                
                             <div>
                                 <h2 className={typo.bold14}>{row.id}. {row.header}</h2>
                                 <div className={styles.icon}></div>
@@ -49,6 +49,6 @@ export default function SSS() {
                     </div>
                 ))
             }
-       </div>
+       </section>
     )
 }

@@ -2,7 +2,6 @@
 
 import styles from './index.module.css'
 import typo from '@/styles/typo.module.css'
-import { Logo } from '@/components/icons'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { usePathname } from 'next/navigation'
@@ -14,10 +13,10 @@ export default function Header() {
     return(
         <header className={styles.header}>
             <div className={styles.left} onClick={() => pathname !== '/'?router.push('/'):false}>
-                <Logo/>
+            <img src="/logo.svg" alt="Özşahin Nakliyat" width={133} height={33}/>
             </div>
             <div className={styles.right}>
-                <input type="checkbox" id="toggleMenu" />
+                <input type="checkbox" id="toggleMenu" hidden />
                 <label htmlFor="toggleMenu">
                     <button aria-label='Open global navigation menu'>
                         <div className={styles.topBar}></div>

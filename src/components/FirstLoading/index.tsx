@@ -4,10 +4,12 @@ import styles from './index.module.css'
 
 export default function FirstLoading() {
     
-    const [isLoading, setLoading] = useState(true)
+    const [isLoading, setLoading] = useState(false)
     useEffect(() => {
-        setTimeout(() => {
-            setLoading(() => false)
+        document.fonts.ready.then((a) => {
+            console.log(a)
+            setLoading(false)
+
         })
     },[])
 

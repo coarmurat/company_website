@@ -1,5 +1,6 @@
-import Header from '@/components/Header'
 import TopCallRow from '@/components/TopCallRow'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export default function LandingPageLayout({
   children,
@@ -11,6 +12,7 @@ export default function LandingPageLayout({
       <TopCallRow/>
       <Header/>
       <main>{children}</main>
+      <Footer/>
     </>
   )
 }

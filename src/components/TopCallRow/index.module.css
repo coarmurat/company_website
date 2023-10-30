@@ -28,6 +28,16 @@
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.06px;    
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.topCallRow button span::before{
+    content: '';
+    display: flex;
+    width: 18px;
+    height: 18px;
+    background-image: var(--phoneCall);
 }
 .showCallButton{
     opacity: 1 !important;

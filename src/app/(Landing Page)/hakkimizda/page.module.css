@@ -1,0 +1,17 @@
+.hakkimizda{
+    display: flex;
+    flex-direction: column;
+    padding: 24px 12px;
+}
+.hakkimizda h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.hakkimizda h1::before{
+    background-image: url('/carry.svg');
+    content: '';
+    width: 90px;
+    height: 60px;
+}

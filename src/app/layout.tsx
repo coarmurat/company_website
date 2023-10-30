@@ -1,14 +1,7 @@
 import './normalize.css'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 
-const inter = Inter({
-  variable: '--font-inter',
-  weight: ['400', '500', '700', '800'],
-  subsets: ['latin'],
-  display:'optional',
-})
 
 export const metadata: Metadata = {
   title: 'Özşahin Nakliyat',
@@ -20,9 +13,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  //<link rel="preload" href="_next\static\media\6bfb3be2b6ec12f5-s.p.woff2" as="font" type="font/woff2" crossorigin/>
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>{children}</body>
     </html>
   )
 }

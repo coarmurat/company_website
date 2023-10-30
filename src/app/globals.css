@@ -1,3 +1,10 @@
+@font-face { 
+    font-family: "Inter";
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: fallback;
+    src: url('/Inter.woff2') format('woff2');
+}
 :root {
     --dark-gray: #383838;
     --green: #008806;
@@ -9,6 +16,15 @@
     --light-blue: #E8F8FF;
     --very-dark-gray: #242424;
     --slate-blue: #29333F;
+}
+body{
+    font-family: "Inter";
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh !important;
+}
+main{
+    flex: 1;
 }
 a{
     text-decoration: none;
@@ -30,4 +46,16 @@ ul,h1,h2,h3{
 ul,li{
     display: flex;
 }
-
+div,span, div::before, span::before, div::after, span::after, a::before{
+    background-repeat: no-repeat;
+    background-position: center;
+}
+h1{
+    font-size: 24px !important;
+}
+h2{
+    font-size: 20px !important;
+}
+h3{
+    font-size: 18px !important;
+}

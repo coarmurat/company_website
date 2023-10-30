@@ -1,0 +1,53 @@
+.sirketPolitikamiz{
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    gap: 12px;    
+}
+.sirketPolitikamiz  h2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+.sirketPolitikamiz > div{
+    display: flex;
+    flex-direction: column;
+}
+.sirketPolitikamiz h3{
+    border-radius: 6px;
+    background: var(--navy-blue);
+    color: var(--white);
+    display: flex;
+    padding: 6px 0px;
+    justify-content: center;    
+}
+.sirketPolitikamiz p{
+    display: flex;
+    gap: 12px;
+}
+.sirketPolitikamiz p::before{
+    background-repeat: no-repeat;
+    background-position: center;
+    content: '';
+    display: flex;
+    flex: 0 0 40px;
+}
+.politika1 p::before{
+    background-image: var(--smile);
+}
+.politika2 p::before{
+    background-image: var(--personal);
+}
+.politika3 p::before{
+    background-image: var(--secure);
+}
+.politika4 p::before{
+    background-image: var(--clock);
+}
+.politika5 p::before{
+    background-image: var(--promise);
+}
+.politika6 p::before{
+    background-image: var(--check);
+}

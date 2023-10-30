@@ -1,0 +1,93 @@
+.hizmetlerimiz{
+    display: flex;
+    padding: 12px 12px 24px 12px;
+    flex-direction: column;
+    gap: 18px;
+}
+.hizmetlerimiz h2{
+    color: var(--dark-gray);
+    text-align: center;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.hizmetlerimiz h2::after{
+    width: 50px;
+}
+.hizmetler{
+    color:var(--dark-gray)
+}
+.hizmetler > div{
+    border-radius: 6px;
+    background: linear-gradient(180deg, #E8F8FF 0%, rgba(255, 255, 255, 0.00) 100%);
+    display: flex;
+    padding: 12px;
+    flex-direction: column;
+    gap: 18px;    
+}
+.home,.homeToHome{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.home::after, .homeToHome::after{
+    background-position: center;
+    background-repeat: no-repeat;        
+    content: '';
+    display: flex;
+    width: 30px;
+    height: 30px;
+    align-self: center;
+}
+.home::after{
+    background-image: var(--home);
+}
+.homeToHome::after{
+    background-image: var(--homeToHome);
+}
+.button{
+    border-radius: 99px;
+    background: var(--orange);
+    display: flex;
+    padding: 4px 12px;
+    justify-content: space-around;
+    gap: 12px;
+    width: fit-content;
+    min-width: 110px;
+}
+.hizmet3 button, .hizmet4 button{
+    align-self: flex-end;
+    
+}
+.hizmet3 button::before, .hizmet4 button::before{
+    background-position: center;
+    background-repeat: no-repeat;    
+    content: '';
+    display: flex;
+    width: 30px;
+    height: 22px;
+}
+.hizmet3 button::after, .hizmet4 button::after{
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 30px;
+    pointer-events: none;
+}
+.hizmet3 button::before{
+    background-image: var(--whatsapp);
+}
+.hizmet3 button::after{
+    background-image: var(--send);
+}
+.hizmet4 button::before{
+    background-image: var(--phone);
+}
+.hizmet4 button::after{
+    background-image: var(--callCenter);
+}

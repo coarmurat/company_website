@@ -1,0 +1,13 @@
+.musteriYorumlari{
+    background: linear-gradient(180deg, #EC932D 0%, rgba(236, 147, 45, 0.00) 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;
+}
+.musteriYorumlari h2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}

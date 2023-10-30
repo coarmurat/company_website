@@ -1,0 +1,32 @@
+.nedenBiz{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;
+}
+.nedenBiz h2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+.nedenBiz p{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+.nedenBiz :nth-child(3)::before, .nedenBiz :nth-child(4)::after{
+    background-image: url('/courier1.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    content: '';
+    display: flex;
+    flex: 0 0 66px;
+    height: 106px;
+}
+.nedenBiz :nth-child(3)::before{
+    background-image: url('/courier1.svg');
+}
+.nedenBiz :nth-child(4)::after{
+    background-image: url('/courier2.svg');
+}
