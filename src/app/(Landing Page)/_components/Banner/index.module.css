@@ -12,6 +12,8 @@
 .bannerImageWrapper img{
     width: 100%;
     height: auto;
+    filter: drop-shadow(2px 4px 6px #0000008a);
+    z-index: 1;
 }
 .bannerImageWrapper{
     display: flex;

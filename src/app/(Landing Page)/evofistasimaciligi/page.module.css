@@ -1,0 +1,54 @@
+.evOfisTasimaciligi{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 36px 12px;
+}
+.evOfisTasimaciligi h1{
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.evOfisTasimaciligi h1::after{
+    background-image: url('/boxes.svg');
+    content: '';
+    display: flex;
+    width: 60px;
+    height: 60px;
+}
+.evOfisTasimaciligi strong{
+    display: contents;
+}
+.evOfisTasimaciligi p:not(p:first-of-type, p:nth-last-of-type(2), p:last-of-type){
+    display: flex;
+    gap:12px;
+    align-items: center;
+}
+.evOfisTasimaciligi p:not(p:first-of-type, p:nth-last-of-type(2), p:last-of-type)::before{
+    content: '';
+    display: flex;
+    flex: 0 0 30px;
+    height: 30px;
+}
+.evOfisTasimaciligi p:nth-of-type(2)::before{
+    background-image: var(--home);
+}
+.evOfisTasimaciligi p:nth-of-type(3)::before{
+    background-image: var(--closedBox);
+}
+.evOfisTasimaciligi p:nth-of-type(4)::before{
+    background-image: var(--boxGroup);
+}
+.evOfisTasimaciligi p:nth-of-type(5)::before{
+    background-image: var(--truck);
+}
+.evOfisTasimaciligi p:nth-of-type(6)::before{
+    background-image: var(--assembly);
+}
+.evOfisTasimaciligi p:nth-of-type(7)::before{
+    background-image: var(--openBox);
+}
+.evOfisTasimaciligi p:nth-of-type(8)::before{
+    background-image: var(--control);
+}

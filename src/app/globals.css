@@ -46,7 +46,7 @@ ul,h1,h2,h3{
 ul,li{
     display: flex;
 }
-div,span, div::before, span::before, div::after, span::after, a::before{
+div,span, div::before, span::before, div::after, span::after, a::before, h1::after, p::before{
     background-repeat: no-repeat;
     background-position: center;
 }
