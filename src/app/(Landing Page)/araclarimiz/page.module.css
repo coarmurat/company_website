@@ -1,0 +1,17 @@
+.araclarimiz{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 24px 12px;
+}
+.araclarimiz h1{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+.araclarimiz img{
+    object-fit: cover;
+    border-radius: 16px;
+}
