@@ -5,10 +5,21 @@ import typo from '@/styles/typo.module.css'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { usePathname } from 'next/navigation'
+import { useRef, useEffect } from 'react'
 
 export default function Header() {
+    const navInput = useRef<HTMLInputElement|null>(null)
     const router = useRouter()
     const pathname = usePathname()
+    
+    useEffect(() => {
+        
+        if(navInput.current){
+
+            navInput.current.checked = false
+        }
+
+    },[pathname])
 
     return(
         <header className={styles.header}>
@@ -16,7 +27,7 @@ export default function Header() {
             <img src="/logo.svg" alt="Özşahin Nakliyat" width={133} height={33}/>
             </div>
             <div className={styles.right}>
-                <input type="checkbox" id="toggleMenu" hidden />
+                <input type="checkbox" id="toggleMenu" hidden ref={navInput}/>
                 <label htmlFor="toggleMenu">
                     <button aria-label='Open global navigation menu'>
                         <div className={styles.topBar}></div>

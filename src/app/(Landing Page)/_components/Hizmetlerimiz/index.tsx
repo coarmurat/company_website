@@ -27,7 +27,7 @@ export default function Hizmetlerimiz() {
         <div className={styles.hizmet3}>
           <h3 className={typo.medium16}>Fotoğrafla fiyat alma</h3>
           <p className={typo.regular14}>WhatsAPP uygulaması üzerinden tarafımaza ileteceğiniz fotoğraflar ile firmamızdan en uygun fiyatı alabilirsiniz detaylı bir şekilde fotoğraf göndermeyi ve evin büyüklüğü ve kaçıncı katta olduğunu yazmayı lütfen unutmayın.</p>
-          <button className={`${typo.regular14} ${styles.button} ${styles.whatsapp} ${sendSVG.className} ${whatsappSVG.className}`}>Ara</button>
+          <button className={`${typo.regular14} ${styles.button} ${styles.whatsapp} ${sendSVG.className} ${whatsappSVG.className}`}>Gönder</button>
         </div>
         <div className={styles.hizmet4}>
           <h3 className={typo.medium16}>Telefonla fiyat alma</h3>
