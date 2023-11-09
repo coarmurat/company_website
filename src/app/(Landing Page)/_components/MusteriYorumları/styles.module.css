@@ -1,5 +1,5 @@
 .musteriYorumlari{
-    background: linear-gradient(180deg, #EC932D 0%, rgba(236, 147, 45, 0.00) 100%);
+    background: linear-gradient(180deg, var(--orange) 0%, rgba(236, 147, 45, 0.00) 100%);
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -10,4 +10,83 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;    
+    padding-bottom: 20px;
+    gap: 3px;
+}
+.musteriYorumlari h2::after{
+    background-color: var(--navy-blue);
+}
+.profiles{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    flex: 1;
+    max-width: 320px;
+}
+.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 calc(100% / 3);
+    gap: 6px;
+}
+.photo{
+    background-color: var(--white);
+    background-image: url('/avatar.svg');
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: width .4s, height .4s;
+}
+.middleProfile .photo{
+    width: 90px;
+    height: 90px;
+}
+.middleProfile .stars div:before{
+    width: 14px;
+    height: 14px;
+}
+.stars{
+    display: flex;
+    gap: 2px;
+}
+.stars div{
+    display: flex;
+}
+.stars div::before{
+    background-image: url('/star.svg');
+    content: '';
+    display: flex;
+    width: 8px;
+    height: 8px;
+    filter: brightness(10);
+    transition: width .4s, height .4s;
+}
+.pointed::before{
+    filter: unset !important;
+}
+.customers{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    align-self: center;
+    width: 100%;
+}
+.left, .right{
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    border-right:18px solid var(--navy-blue); 
+}
+.right{
+    transform: rotate(180deg);
+}
+.reviews{
+    display: flex;
+    overflow: hidden;
+}
+.reviews p{
+    min-width: 100%;
 }
