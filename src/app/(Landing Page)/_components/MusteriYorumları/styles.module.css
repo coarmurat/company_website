@@ -16,12 +16,19 @@
 .musteriYorumlari h2::after{
     background-color: var(--navy-blue);
 }
-.profiles{
+.slides{
     display: flex;
-    align-items: center;
     overflow: hidden;
     flex: 1;
     max-width: 320px;
+    height: 160px;
+}
+.profiles{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transform: translateX(calc(100% / 3));
+    transition: transform .4s;
 }
 .profile{
     display: flex;
@@ -86,7 +93,12 @@
 .reviews{
     display: flex;
     overflow: hidden;
+    overflow-y: scroll;
+    height: 200px;
 }
 .reviews p{
     min-width: 100%;
+}
+.hide{
+    opacity: .5;
 }

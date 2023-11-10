@@ -1,23 +1,10 @@
-import Image from 'next/image'
 import styles from './page.module.css'
-import softTriangleSVG from '@/styles/images/softTriangle.module.css'
+import Slider from './_components/slider'
 
 export default function Galeri() {
   return (
     <>
-      <section className={styles.slider}>
-        <div className={`${styles.slides} ${softTriangleSVG.className}`}>
-          <button></button>
-          <div className={styles.slide}>
-            <Image src={'/banner.png'} alt="dd" width={200} height={100} priority></Image>
-          </div>
-          <button></button>
-        </div>
-        <div className={styles.imageNumber}>
-          <div>1</div>
-          <div>/20</div>
-        </div>
-      </section>
+      <Slider/>
       <section className={styles.text}>
         <p>
           Değerli Müşterilerimiz, <br/><br/>
