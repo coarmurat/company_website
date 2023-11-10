@@ -85,32 +85,34 @@ export default function MusteriYorumlari() {
 
     return(
         <section className={styles.musteriYorumlari}>
-            <h2 className={underLine.className}>Müşteri Yorumları</h2>
-            <div className={styles.customers}>
-                <div className={`${styles.left} ${showLeftButton ? '' : styles.hide}`} onClick={() => handleButton(-1)}></div>
-                <div className={styles.slides}>
-                    <div className={styles.profiles} ref={profilesDomElementRef}>
-                        {
-                            reviews.map((reviev,index) => (
-                                <div className={`${styles.profile} ${reviev.current ? styles.middleProfile : '' }`} key={index}>
-                                    <div className={styles.photo}></div>
-                                    <div className={styles.name}>{reviev.name}</div>
-                                    <div className={styles.stars}>
-                                        <div className={reviev.star / 1 >= 1 ? styles.pointed: ''}></div>
-                                        <div className={reviev.star / 2 >= 1 ? styles.pointed: ''}></div>
-                                        <div className={reviev.star / 3 >= 1 ? styles.pointed: ''}></div>
-                                        <div className={reviev.star / 4 >= 1 ? styles.pointed: ''}></div>
-                                        <div className={reviev.star / 5 >= 1 ? styles.pointed: ''}></div>
+            <div className={styles.wrapper}>
+                <h2 className={underLine.className}>Müşteri Yorumları</h2>
+                <div className={styles.customers}>
+                    <div className={`${styles.left} ${showLeftButton ? '' : styles.hide}`} onClick={() => handleButton(-1)}></div>
+                    <div className={styles.slides}>
+                        <div className={styles.profiles} ref={profilesDomElementRef}>
+                            {
+                                reviews.map((reviev,index) => (
+                                    <div className={`${styles.profile} ${reviev.current ? styles.middleProfile : '' }`} key={index}>
+                                        <div className={styles.photo}></div>
+                                        <div className={styles.name}>{reviev.name}</div>
+                                        <div className={styles.stars}>
+                                            <div className={reviev.star / 1 >= 1 ? styles.pointed: ''}></div>
+                                            <div className={reviev.star / 2 >= 1 ? styles.pointed: ''}></div>
+                                            <div className={reviev.star / 3 >= 1 ? styles.pointed: ''}></div>
+                                            <div className={reviev.star / 4 >= 1 ? styles.pointed: ''}></div>
+                                            <div className={reviev.star / 5 >= 1 ? styles.pointed: ''}></div>
+                                        </div>
                                     </div>
-                                </div>
-                            ))
-                        }
+                                ))
+                            }
+                        </div>
                     </div>
+                    <div className={`${styles.right} ${showRightButton ? '' : styles.hide}`} onClick={() => handleButton(1)}></div>
                 </div>
-                <div className={`${styles.right} ${showRightButton ? '' : styles.hide}`} onClick={() => handleButton(1)}></div>
-            </div>
-            <div className={styles.reviews} ref={textsDomElementRef}>
-                {reviews.map((review, index) => <p key={index}>{review.text}</p>)}
+                <div className={styles.reviews} ref={textsDomElementRef}>
+                    {reviews.map((review, index) => <p key={index}>{review.text}</p>)}
+                </div>
             </div>
         </section>
     )

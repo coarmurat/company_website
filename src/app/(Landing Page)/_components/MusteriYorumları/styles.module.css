@@ -2,10 +2,14 @@
     background: linear-gradient(180deg, var(--orange) 0%, rgba(236, 147, 45, 0.00) 100%);
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    padding: 24px;
 }
-.musteriYorumlari h2{
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;    
+}
+.wrapper h2{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,7 +17,7 @@
     padding-bottom: 20px;
     gap: 3px;
 }
-.musteriYorumlari h2::after{
+.wrapper h2::after{
     background-color: var(--navy-blue);
 }
 .slides{
@@ -67,7 +71,7 @@
     display: flex;
     width: 8px;
     height: 8px;
-    filter: brightness(10);
+    filter: brightness(4);
     transition: width .4s, height .4s;
 }
 .pointed::before{
@@ -76,6 +80,7 @@
 .customers{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     align-self: center;
     width: 100%;
@@ -93,7 +98,7 @@
 .reviews{
     display: flex;
     overflow: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     height: 200px;
 }
 .reviews p{
@@ -101,4 +106,14 @@
 }
 .hide{
     opacity: .5;
+}
+
+@media (min-width:600px){
+    .musteriYorumlari{
+        background: var(--white);
+        align-items: center;
+    }
+    .wrapper{
+        max-width: calc( var(--max-width) / 2);
+    }
 }

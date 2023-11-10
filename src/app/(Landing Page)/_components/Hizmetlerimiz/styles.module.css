@@ -16,7 +16,9 @@
     width: 50px;
 }
 .hizmetler{
-    color:var(--dark-gray)
+    color:var(--dark-gray);
+    display: flex;
+    flex-direction: column;
 }
 .hizmetler > div{
     border-radius: 6px;
@@ -90,4 +92,32 @@
 }
 .hizmet4 button::after{
     background-image: var(--callCenter);
+}
+
+@media (min-width:600px){
+    .hizmetlerimiz{
+        align-items: center;
+    }
+    .hizmetler{
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        padding: 48px;
+        max-width: var(--max-width);
+    }
+    .hizmetler > div{
+        flex: 1;
+    }
+    .hizmet3 button, .hizmet4 button{
+        align-self: center;        
+    }
+    .hizmet3 button::after, .hizmet4 button::after{
+        all: unset;
+    }
+    .hizmetler p{
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        gap: 68px;
+    }
 }

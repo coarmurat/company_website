@@ -6,6 +6,7 @@
     src: url('/Inter.woff2') format('woff2');
 }
 :root {
+    --gray: #ddd;
     --dark-gray: #383838;
     --green: #008806;
     --light-green:#00ca09;
@@ -16,12 +17,14 @@
     --light-blue: #E8F8FF;
     --very-dark-gray: #242424;
     --slate-blue: #29333F;
+    --max-width: 1024px;
 }
 body{
     font-family: "Inter";
     display: flex;
     flex-direction: column;
     min-height: 100vh !important;
+    width: 100%;
 }
 main{
     flex: 1;
@@ -39,7 +42,7 @@ button{
 html,button,input,select,textarea{
     font-family:unset;
 }
-ul,h1,h2,h3{
+ul,h1,h2,h3,p{
   padding: 0;  
   margin: 0;
 }
@@ -58,4 +61,14 @@ h2{
 }
 h3{
     font-size: 18px !important;
+}
+
+@media (min-width:600px){
+    main{
+        background-color: var(--gray);
+    }
+    html{
+        display: flex;
+        justify-content: center;
+    }
 }

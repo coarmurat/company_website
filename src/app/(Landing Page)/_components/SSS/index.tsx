@@ -34,21 +34,23 @@ export default function SSS() {
 
     return(
         <section className={styles.sss}>
-            <h1 className={`${typo.bold14} ${underLine.className}`}>Sık Sorulan Sorular</h1>
-            {
-                sss.map(row => (
-                    <div className={styles.row} key={row.id}>
-                        <input type='radio' id={`${row.id}`} name='accordion' hidden />
-                        <label className={styles.row} htmlFor={`${row.id}`}>                
-                            <div>
-                                <h2 className={typo.bold14}>{row.id}. {row.header}</h2>
-                                <div className={styles.icon}></div>
-                            </div>
-                            <p>{row.paragraph}</p>
-                        </label>
-                    </div>
-                ))
-            }
+            <div className={styles.wrapper}>
+                <h1 className={`${typo.bold14} ${underLine.className}`}>Sık Sorulan Sorular</h1>
+                {
+                    sss.map(row => (
+                        <div className={styles.row} key={row.id}>
+                            <input type='radio' id={`${row.id}`} name='accordion' hidden />
+                            <label className={styles.row} htmlFor={`${row.id}`}>                
+                                <div>
+                                    <h2 className={typo.bold14}>{row.id}. {row.header}</h2>
+                                    <div className={styles.icon}></div>
+                                </div>
+                                <p>{row.paragraph}</p>
+                            </label>
+                        </div>
+                    ))
+                }
+            </div>
        </section>
     )
 }

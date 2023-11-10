@@ -1,18 +1,21 @@
 .sss{
     background-color: var(--navy-blue);
     display: flex;
+}
+.wrapper{
+    display: flex;
     padding: 12px;
     flex-direction: column;
     gap: 12px;    
 }
-.sss h1{
+.wrapper h1{
     color: var(--white);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 12px;
 }
-.sss h1::after{
+.wrapper h1::after{
     width: 50px;
 }
 .icon{
@@ -39,7 +42,7 @@
     display: flex;
     justify-content: space-between;
 }
-.sss input{
+.wrapper input{
     display: none;
 }
 .row input:checked + label{
@@ -52,4 +55,13 @@
 }
 .row input:checked + label .icon{
     background-image: url('/minus.svg') !important;
+}
+
+@media (min-width:600px){
+    .sss{
+        justify-content: center;
+    }
+    .wrapper{
+        width: var(--max-width);
+    }
 }

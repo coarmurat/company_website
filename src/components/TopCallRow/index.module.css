@@ -50,3 +50,11 @@
         padding-block: 12px;
     }
 }
+
+@media (min-width:600px){
+    .topCallRow{
+        padding: 0;
+        height: 0;
+        overflow: hidden;
+    }       
+}

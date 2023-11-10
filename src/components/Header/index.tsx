@@ -24,7 +24,7 @@ export default function Header() {
     return(
         <header className={styles.header}>
             <div className={styles.left} onClick={() => pathname !== '/'?router.push('/'):false}>
-            <img src="/logo.svg" alt="Özşahin Nakliyat" width={133} height={33}/>
+                <img src="/logo.svg" alt="Özşahin Nakliyat" width={133} height={33}/>
             </div>
             <div className={styles.right}>
                 <input type="checkbox" id="toggleMenu" hidden ref={navInput}/>
@@ -37,10 +37,10 @@ export default function Header() {
                 </label>
                 <nav>
                     <ul>
-                        <li className={styles.mainItem}><Link className={`${typo.medium18}`} href='/'>ANASAYFA</Link></li>
-                        <li className={styles.mainItem}><Link className={`${typo.medium18}`} href='/hakkimizda'>HAKKIMIZDA</Link></li>
+                        <li className={styles.mainItem}><Link className={`${typo.medium18}`} href='/'>Anasayfa</Link></li>
+                        <li className={styles.mainItem}><Link className={`${typo.medium18}`} href='/hakkimizda'>Hakkımızda</Link></li>
                         <li className={`${styles.mainItem} ${styles.nestedItem}`}>
-                            <button className={typo.medium18}>HİZMETLERİMİZ</button>
+                            <button className={typo.medium18}>Hizmetlerimiz</button>
                             <ul>
                                 <li className={styles.subItem}><Link className={`${typo.regular18}`} href='/evofistasimaciligi'>Ev ofis taşımacılığı</Link></li>
                                 <li className={styles.subItem}><Link className={`${typo.regular18}`} href='/parcaesyatasima'>Parça eşya taşıma</Link></li>
@@ -48,9 +48,9 @@ export default function Header() {
                                 <li className={styles.subItem}><Link className={`${typo.regular18}`} href='/asansorkiralama'>Asansör kiralama</Link></li>
                             </ul>
                         </li>
-                        <li className={styles.mainItem}><Link className={`${typo.medium18}`} href='/galeri'>GALERİ</Link></li>
-                        <li className={styles.mainItem}><Link className={`${typo.medium18}`} href='/araclarimiz'>ARAÇLARIMIZ</Link></li>
-                        <li className={styles.mainItem}><Link className={`${typo.medium18}`} href='/iletisim'>İLETİŞİM</Link></li>
+                        <li className={styles.mainItem}><Link className={`${typo.medium18}`} href='/galeri'>Galeri</Link></li>
+                        <li className={styles.mainItem}><Link className={`${typo.medium18}`} href='/araclarimiz'>Araçlarımız</Link></li>
+                        <li className={styles.mainItem}><Link className={`${typo.medium18}`} href='/iletisim'>İletişim</Link></li>
                     </ul>
                 </nav>
             </div>

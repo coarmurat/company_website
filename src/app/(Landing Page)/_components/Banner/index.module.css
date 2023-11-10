@@ -1,10 +1,19 @@
 .banner{
     background-color: var(--navy-blue);
     display: flex;
+}
+.wrapper{
+    display: flex;
     padding: 24px;
     flex-direction: column;
     gap: 20px;
     color: var(--white);
+    max-width: var(--max-width);
+}
+.texts{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 .banner h1 span{
     color: var(--orange);
@@ -12,10 +21,25 @@
 .bannerImageWrapper img{
     width: 100%;
     height: auto;
+    object-fit: contain;
     filter: drop-shadow(2px 4px 6px #0000008a);
     z-index: 1;
 }
 .bannerImageWrapper{
     display: flex;
-    object-fit: cover;
+}
+@media (min-width:600px){
+    .banner{
+        justify-content: center;
+    }
+    .wrapper{
+        flex-direction: row;
+        gap: 120px;
+        padding: 48px;
+        justify-content: space-between;
+    }
+    .texts{
+        width: 330px;
+        justify-content: center;
+    }
 }

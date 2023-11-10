@@ -10,10 +10,10 @@ export default function Home() {
     <>
       <Banner/>
       <Hizmetlerimiz/>
-      <SSS/>
       <SirketPolitikamiz/>
       <NedenBiz/>
       <MusteriYorumlari/>
+      <SSS/>
     </>
   )
 }

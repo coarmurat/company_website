@@ -2,21 +2,26 @@
     color: var(--white);
     background-color: var(--slate-blue);
     display: flex;
+
+}
+.wrapper{
+    display: flex;
     flex-direction: column;
     padding: 24px 18px;
     gap: 22px;
+    max-width: var(--max-width);
 }
-.footer > div:nth-child(2){
+.first, .second{
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
-.footer ul{
+.wrapper ul{
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-.footer img{
+.wrapper img{
     width: 24px;
     height: 24px;
 }
@@ -56,13 +61,33 @@
 .email::before{
     background-image: url('/mailbox.svg');
 }
-.footer div:nth-child(4){
+.bottom{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4px;
 }
-.footer div:nth-child(4) a{
+.bottom a{
     color: var(--white);
     padding: 8px;
+}
+
+@media (min-width:600px){
+    .footer{
+        justify-content: center;
+    }
+    .wrapper{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .first{
+        max-width: 280px;
+    }
+
+    .bottom{
+        width: 100%;
+    }
+    .contact{
+        margin-left: auto;
+    }
 }
